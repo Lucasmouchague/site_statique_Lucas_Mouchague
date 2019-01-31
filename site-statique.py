@@ -1,5 +1,6 @@
 import argparse
 import markdown2
+import os
 
 invalid_input_path = "[!] Error: input path invalid"
 invalid_output_path = "[!] Error: output path invalid"
@@ -20,7 +21,13 @@ def valid_output_path(output_path):
 	return os.path.exists(output_path)
 
 def convert():
-	pass
+	for files in os.listdir(path):
+		print(files)
+
+
+		#if files.endswith('.md'):
+
+
 
 def main():
 	parser = argparse.ArgumentParser(description = "Markdown to html program")
