@@ -2,7 +2,6 @@ import markdown2
 import time
 import os
 
-
 '''
 path = input('votre chemin: ')
 for files in os.listdir(path):
@@ -11,6 +10,7 @@ for files in os.listdir(path):
 	html = markdown2.markdown(text)
 	print (html)
 '''
+
 print("[!]refer the path of your files without quotes[!]")
 file = input("Path of your file: ")
 

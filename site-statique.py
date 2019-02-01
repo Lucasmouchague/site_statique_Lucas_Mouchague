@@ -2,40 +2,23 @@ import argparse
 import markdown2
 import os
 
-invalid_input_path = "[!] Error: input path invalid"
-invalid_output_path = "[!] Error: output path invalid"
+print("[!]refer the path of your files without quotes[!]")
+parser = argparse.ArgumentParser(description = "Markdown to html program")
 
-def valid_path(input_path, output_path):
-	if not valid_input(path):
-		print(invalid_input_path)
-		quit()
-	if not valid_output(output_path):
-		print(invalid_output_path)
-		quit()
-	return
+parser.add_argument("-i", "--input_files", type = str, nargs = 1, metavar = "path_files", default = None, help = "Path of files.")
 
-def valid_input_path(input_path):
-	return os.path.exists(input_path)
+parser.add_argument("-o", "--output_files", type = str, nargs = 1, metavar = "output_files", default = None, help = "Output path of files")
 
-def valid_output_path(output_path):
-	return os.path.exists(output_path)
+args = parser.parse_args()
 
-def convert():
-	for files in os.listdir(path):
-		print(files)
+def convert(args.input_files):
 
-
-		#if files.endswith('.md'):
-
-
-
-def main():
-	parser = argparse.ArgumentParser(description = "Markdown to html program")
-
-	parser.add_argument("-i", "--input_files", type = str, nargs = 1, metavar = "path_files", default = None, help = "Path of files.")
-
-	parser.add_argument("-o", "--output_files", type = str, nargs = 1, metavar = "output_files", default = None, help = "Output path of files")
-
-	args = parser.parse_args()
-if __name__ == '__main__':
-	main()
+	if input_files[0] == "'" or input_files[0] == '"':
+		print('bad format of input')
+		time.sleep(1)
+		exit()
+	else:
+		convert_file = open(file, mode='r', encoding="utf-8")
+		text = convert_file.read()
+		html = markdown2.markdown(text)
+		print(html)
