@@ -2,6 +2,7 @@ import markdown2
 import time
 import os
 import click
+import random
 
 '''
 path = input('votre chemin: ')
@@ -16,8 +17,9 @@ for files in os.listdir(path):
 @click.option("-i", "--input_file", default = '', help = "path of input file")
 @click.option("-o", "--output_file", default = '', help = "Path of output file")
 @click.option("-t", "--title", default = 'site-statique', help = "Title of your website")
+@click.option("-k", "--kikoo_lol", default = False, help = "If True add some kikoo word")
 
-def convert(input_file, output_file, title):
+def convert(input_file, output_file, title, kikoo_lol):
 	
 	HTML_start = '<!DOCTYPE html>\n<html>\n<head>\n<title>' + title + '</title>\n</head>\n<body>\n' 
 	HTML_end = '</body>\n</html>'
@@ -36,6 +38,11 @@ def convert(input_file, output_file, title):
 		convert_file = open(file, mode='r', encoding="utf-8")
 		text = convert_file.read()
 		html = markdown2.markdown(text)
+		'''
+		if kikoo_lol == True:
+			kikoo_list = ["<p>Kikoo</p>", "<p>lol</p>", "<p>mdr</p>", "<p>ptdr</p>"]
+			html.append(random.choice(kikoo_list))
+		'''
 		output = open(output_file, "w+")
 		output.write(HTML_start + html + HTML_end)
 		output.close
