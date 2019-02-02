@@ -13,8 +13,8 @@ for files in os.listdir(path):
 '''
 
 @click.command()
-@click.option("--input_file", default = '', help = "path of input file")
-@click.option("--output_file", default = '', help = "Path of output file")
+@click.option("-i", "--input_file", default = '', help = "path of input file")
+@click.option("-o", "--output_file", default = '', help = "Path of output file")
 
 
 def convert_test(input_file, output_file):
@@ -27,7 +27,7 @@ def convert_test(input_file, output_file):
 		convert_file = open(file, mode='r', encoding="utf-8")
 		text = convert_file.read()
 		html = markdown2.markdown(text)
-		f = open(output_file)
+		f = open(output_file, "w+")
 		f.write(html)
 		f.close
 
