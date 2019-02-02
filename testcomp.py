@@ -17,12 +17,17 @@ for files in os.listdir(path):
 @click.option("-o", "--output_file", default = '', help = "Path of output file")
 @click.option("-t", "--title", default = 'site-statique', help = "Title of your website")
 
-def convert_test(input_file, output_file, title):
+def convert(input_file, output_file, title):
 	
 	HTML_start = '<!DOCTYPE html>\n<html>\n<head>\n<title>' + title + '</title>\n</head>\n<body>\n' 
 	HTML_end = '</body>\n</html>'
 	file = input_file
 	
+	if output_file == '':
+		print('No output exiting...')
+		time.sleep(1)
+		quit()
+
 	if file[0] == "'" or file[0] == '"':
 		print('bad format of input')
 		time.sleep(1)
@@ -36,4 +41,4 @@ def convert_test(input_file, output_file, title):
 		output.close
 
 if __name__ == '__main__':
-	convert_test()
+	convert()
