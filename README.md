@@ -8,7 +8,7 @@ Open a console:
 git clone https://github.com/Lucasmouchague/site_statique_Lucas_Mouchague
 cd site_statique_Lucas_Mouchague
 ```
-Once your in the directory you have to install some packages to do that you can execute the command
+Once your in the directory you have to install some packages to do that you can execute the command.
 ```
 pip install -r requirements.txt
 ```
@@ -26,7 +26,7 @@ Options:
   -t, --title TEXT        Title of your website.
   --help                  Show this message and exit.
 ```
-The conversion of the file are make with Mardown2 (https://github.com/trentm/python-markdown2)
+The conversion of the file are make with Mardown2(https://github.com/trentm/python-markdown2).
 
 #### Example
 ```
@@ -34,7 +34,7 @@ $python3 site-statique.py --input_file path_of_your_input_file/your_file.md --ou
 
 Conversion successful!
 ```
-You can also add a title to your html page
+You can also add a title to your html page.
 ```
 $python3 site-statique.py --input_file path_of_your_input_file/your_file.md --output_file path_of_your_output_file/your_file.html --title your_title
 
@@ -42,13 +42,11 @@ Conversion successful!
 ```
 #### Real usage:
 The real usage of this program is to make custom static site on the github platform
-To do this create a new repository and name it like this
-```
-the_name_of_your_repo.github.io
-```
+To do this create a new repository.
+
 ![Alt text]()
 
-after that clone it on your computer
+after that clone it on your computer.
 ```
 git clone https://github.com/Lucasmouchague/test.github.io.git
 Clonage dans 'test.github.io'...
@@ -57,13 +55,13 @@ remote: Counting objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Dépaquetage des objets: 100% (3/3), fait.
 ```
-so now you can use the program to generate your html file
+so now you can use the program to generate your html file.
 ```
 $python3 site-statique.py --input_file path_of_your_input_file/your_file.md --output_file path_of_your_repository/your_file.html --title your_title
 
 Conversion successful!
 ```
-After commit and push it
+After commit and push it.
 
 ```
 git add --all
@@ -72,3 +70,8 @@ git commit -m "Initial commit"
 
 git push -u origin master
 ```
+Fire up a browser and type in the url.
+```
+https://your_username.github.io/your_repository
+```
+And you have your own static website.
