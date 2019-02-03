@@ -44,9 +44,7 @@ Conversion successful!
 ```
 #### Real usage:
 The real usage of this program is to make custom static site on the github platform
-To do this create a new repository.
-
-![Alt text]()
+To do this create a new repository without README file.
 
 after that clone it on your computer.
 ```
