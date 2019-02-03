@@ -1,7 +1,10 @@
 #Static site
+
 ## Setup:
+
 ### Requirement:
 You must have python 3 up to date with pip and a github account.
+
 ### Download and setup:
 Open a console:
 ```
