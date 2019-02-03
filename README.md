@@ -1,6 +1,6 @@
 # Static site
 
-## Setup:
+##Setup
 
 ### Requirement:
 You must have python 3 up to date with pip and a github account.
