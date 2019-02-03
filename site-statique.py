@@ -1,12 +1,14 @@
-import argparse
 import markdown2
+import time
 import os
+import click
+import random
 
-print("[!]refer the path of your files without quotes[!]")
+
 @click.command()
-@click.option("-i", "--input_file", default = '', help = "path of input file")
-@click.option("-o", "--output_file", default = '', help = "Path of output file")
-@click.option("-t", "--title", default = 'site-statique', help = "Title of your website")
+@click.option("-i", "--input_file", default = '', help = "path of input file without quotes.")
+@click.option("-o", "--output_file", default = '', help = "Path of output file without quotes.")
+@click.option("-t", "--title", default = 'site-statique', help = "Title of your website.")
 
 
 def convert(input_file, output_file, title):
@@ -31,3 +33,7 @@ def convert(input_file, output_file, title):
 		output = open(output_file, "w+")
 		output.write(HTML_start + html + HTML_end)
 		output.close
+		print('Conversion successful!')
+
+if __name__ == '__main__':
+	convert()

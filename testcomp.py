@@ -46,6 +46,7 @@ def convert(input_file, output_file, title, kikoo_lol):
 		output = open(output_file, "w+")
 		output.write(HTML_start + html + HTML_end)
 		output.close
+		print('Conversion successful!')
 
 if __name__ == '__main__':
 	convert()
