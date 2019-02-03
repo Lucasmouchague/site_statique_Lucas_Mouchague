@@ -1,4 +1,4 @@
-#Static site
+# Static site
 
 ## Setup:
 
